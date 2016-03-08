@@ -4,8 +4,7 @@
   Designed specifically to work with the Adafruit BMEP280 Breakout 
   ----> http://www.adafruit.com/products/2651
 
-  These sensors use I2C or SPI to communicate, 2 or 4 pins are required 
-  to interface.
+  This version modified by ubIQio for use on Ardhat which supports I2C only
 
   Adafruit invests time and resources providing this open source code,
   please support Adafruit andopen-source hardware by purchasing products
@@ -16,18 +15,12 @@
  ***************************************************************************/
 
 #include <Wire.h>
-#include <SPI.h>
-#include <Adafruit_Sensor.h>
-#include <Adafruit_BMP280.h>
 
-#define BMP_SCK 13
-#define BMP_MISO 12
-#define BMP_MOSI 11 
-#define BMP_CS 10
+#include "Adafruit_BMP280.h"
+
+
 
 Adafruit_BMP280 bme; // I2C
-//Adafruit_BMP280 bme(BMP_CS); // hardware SPI
-//Adafruit_BMP280 bme(BMP_CS, BMP_MOSI, BMP_MISO,  BMP_SCK);
 
 void setup() {
   Serial.begin(9600);
