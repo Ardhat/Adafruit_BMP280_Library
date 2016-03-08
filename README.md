@@ -1,6 +1,6 @@
 #Adafruit BMP280 Driver (Barometric Pressure Sensor) #
 
-This driver is for the Adafruit BMP280 Breakout (http://www.adafruit.com/products/2651)
+This driver is modified for I2C operation only for use with Ardhat (see http://ardhat.com)
 
 ## About the BMP280 ##
 
